@@ -14,6 +14,10 @@
     <button type="submit">Submit</button>
     
 
+    <p>{{session("success")}}</p>
+    <p>{{session("name")}}</p>
+    <p>{{session("email")}}</p>
+
 
  </form>
 </x-layout>

@@ -15,11 +15,17 @@ class FormController extends Controller
         $name = $request->input('name');
         $email = $request->input('email');
 
-        return [
-            "name"=>$name,
-            "email"=>$email
+        // return [
+        //     "name"=>$name,
+        //     "email"=>$email
             
-        ];
+        // ];
+
+        return redirect(route("form.get"))->with([
+            "success" => "Form submitted Successfully",
+            "name" => $name,
+            "email" =>$email
+        ]);
         
 
     }
