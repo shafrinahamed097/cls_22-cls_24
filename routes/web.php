@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -9,3 +10,5 @@ Route::get('/', function () {
 Route::view("/loginform","forms.login");
 Route::view("/form","forms.form");
 Route::view("/contact","forms.contact");
+
+Route::post("/handleform",[FormController::class, 'handleFormSubmission'])->name("form.post");
