@@ -5,12 +5,18 @@
  <p>How to create and handle forms in Laravel</p>
  </hgroup>
 
- <form action="{{ route ('form.post')}}" method="POST">
+ <form  enctype="multipart/form-data" action="{{ route ('form.post')}}" method="POST">
     @csrf
     <label>Name</label>
     <input type='text' name="name">
+    <br>
     <label>Email</label>
     <input name="email">
+    <br>
+    <label>Profile Picture</label>
+    <input type="file" name="profile_picture">
+    <br>
+
     <button type="submit">Submit</button>
     
    <!-- Show Success Message -->

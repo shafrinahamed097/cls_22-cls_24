@@ -15,6 +15,14 @@ class FormController extends Controller
         $name = $request->input('name');
         $email = $request->input('email');
 
+        if($request->has("profile_picture")){
+            $file = $request->file('profile_picture');
+            $file->store("uploads", "public");
+
+        }
+       
+
+
         // return [
         //     "name"=>$name,
         //     "email"=>$email
