@@ -13,10 +13,15 @@
     <input name="email">
     <button type="submit">Submit</button>
     
+   <!-- Show Success Message -->
 
-    <p>{{session("success")}}</p>
+    <!-- <p>{{session("success")}}</p>
     <p>{{session("name")}}</p>
-    <p>{{session("email")}}</p>
+    <p>{{session("email")}}</p> -->
+
+    <!-- Show Error Message -->
+
+    <p>{{session ("error")}}</p>
 
 
  </form>

@@ -21,11 +21,15 @@ class FormController extends Controller
             
         // ];
 
-        return redirect(route("form.get"))->with([
-            "success" => "Form submitted Successfully",
-            "name" => $name,
-            "email" =>$email
-        ]);
+        // return redirect(route("form.get"))->with([
+        //     "success" => "Form submitted Successfully",
+        //     "name" => $name,
+        //     "email" =>$email
+        // ]);
+
+        return redirect(route("form.get"))->withError("Wrong Data");
+
+
         
 
     }
