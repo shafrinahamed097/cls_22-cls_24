@@ -1,3 +1,3 @@
-<x-layout>
-    <h1>Contact</h1>
+<x-layout title="Login Form">
+    <h1>Login Form</h1>
 </x-layout>
