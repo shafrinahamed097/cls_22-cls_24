@@ -29,6 +29,14 @@
 
     <p>{{session ("error")}}</p>
 
+    <!-- Show in Image -->
+     <p>
+     @if(session('profile_picture'))
+      <img src="{{session('profile_picture')}}" alt="">
+      @endif
+     </p>
+
+   
 
  </form>
 </x-layout>
