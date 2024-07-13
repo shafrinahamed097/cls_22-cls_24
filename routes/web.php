@@ -15,4 +15,4 @@ Route::view("/contact","forms.contact");
 
 
 Route::post("/handleform",[FormController::class, 'handleFormSubmission'])->name("form.post");
-Route::post("/handleform1",[ExtraController::class, 'handleFormSubmission'])->name("form1.post");
+Route::post("/handleform1",[ExtraController::class, 'checkValidation'])->name("form1.post");

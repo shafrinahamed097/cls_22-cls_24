@@ -8,23 +8,14 @@
         @csrf
         <label>Name</label>
         <input name="name">
-        
         <label>Email</label>
         <input name="email">
-        
-        <label>Price</label> <!-- Fixed typo here -->
-        <input name="price" type="number">
-        
-        <button type="submit">Submit</button>
-        
-        @if(session('success'))
-            <p>{{ session('success') }}</p>
-        @endif
 
-        @if($errors->any())
-            @foreach($errors->all() as $error) <!-- Fixed this line -->
-                <p>{{ $error }}</p>
-            @endforeach
-        @endif
+        <br/>
+        <button>Submit</button>
+
+        
+        
+        
     </form>
 </x-layout>
