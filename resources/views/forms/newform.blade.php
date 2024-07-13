@@ -19,9 +19,13 @@
         @endif
 
         <!-- Show Error Message -->
-         @if($errors->any())
-         <p>{{$errors->first()}}</p>
-         @endif
+         @if ($errors->any())
+          @foreach($errors->all() as $error)
+            <p>{{ $error }}</p>
+          @endforeach
+        @endif
+            
+        
         
         
     </form>
