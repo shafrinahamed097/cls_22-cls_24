@@ -14,7 +14,9 @@
         <br/>
         <button>Submit</button>
 
-        
+        @if(session("success"))
+          <p>{{session("success")}}</p>
+        @endif
         
         
     </form>
