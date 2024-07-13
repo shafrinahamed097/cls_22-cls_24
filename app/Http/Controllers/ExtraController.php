@@ -10,8 +10,8 @@ class ExtraController extends Controller
     function checkValidation(Request $request,){
       
       $validation = $request->validate([
-        'name'=>'required',
-        'email'=>'required'
+        'name'=>'required|min:3|max:20|alpha|not_in:admin',
+        'email'=>'required|email'
       ]);
 
       return redirect(route('newform.get'))->with([
