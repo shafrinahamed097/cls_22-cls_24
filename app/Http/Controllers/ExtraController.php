@@ -8,6 +8,11 @@ use App\Http\Requests\FormVRequest;
 class ExtraController extends Controller
 {
     function checkValidation(Request $request,){
+      
+      $validation = $request->validate([
+        'name'=>'required'
+      ]);
+
       return redirect(route('newform.get'))->with([
         'success'=>'Form Submitted Successfully',
         'name'=>$request->input('name'),

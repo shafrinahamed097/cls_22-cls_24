@@ -13,10 +13,15 @@
 
         <br/>
         <button>Submit</button>
-
+        <!-- Show Success Message -->
         @if(session("success"))
           <p>{{session("success")}}</p>
         @endif
+
+        <!-- Show Error Message -->
+         @if($errors->any())
+         <p>{{$errors->first()}}</p>
+         @endif
         
         
     </form>
