@@ -19,7 +19,7 @@ class FormController extends Controller
     ]);
 
     // check validation error
-        if($request->fails()){
+        if($validation->fails()){
             return redirect(route("form.get"))->withErrors($request->errors());
         }
 

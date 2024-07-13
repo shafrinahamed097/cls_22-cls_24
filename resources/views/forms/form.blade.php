@@ -1,4 +1,3 @@
-
 <x-layout title="Normal Form">
  <hgroup>
  <h1>Normal Form</h1>

@@ -16,6 +16,7 @@
      <li><a href="/form">Forms</a></li>
      <li><a href="/contact">Contact</a></li>
      <li><a href="/loginform">login</a></li>
+     <li><a href="/newform">New Form</a></li>
      </menu>
     
   {{$slot}}
