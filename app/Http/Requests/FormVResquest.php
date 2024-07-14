@@ -28,4 +28,12 @@ class FormVResquest extends FormRequest
             'price'=>'nullable|numeric|min:10'
         ];
     }
+
+    function messages(){
+        return [
+            'name.required'=>"Ekhane Name Obboshoi proyjon",
+            'name.min'=>'Naam er minimum length hote hobe 3 ',
+            'name.max'=>'Naam er maximum length 10 hobe'
+        ];
+    }
 }
