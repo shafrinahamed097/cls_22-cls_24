@@ -16,3 +16,11 @@ Route::view("/contact","forms.contact");
 
 Route::post("/handleform",[FormController::class, 'handleFormSubmission'])->name("form.post");
 Route::post("/handleform1",[ExtraController::class, 'checkValidation'])->name("form1.post");
+
+Route::get("/secret", function(){
+    return "Secret Message";
+});
+
+Route::get("/hello", function(){
+    return "Hello World";
+})->middleware(['throttle:2,1']);
