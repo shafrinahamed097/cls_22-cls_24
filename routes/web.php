@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\ExtraController;
+use App\Http\Controllers\HelloController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,3 +26,10 @@ Route::get("/secret", function(){
 Route::get("/hello", function(){
     return "Hello World";
 })->middleware(['throttle:2,1']);
+
+
+
+Route::middleware(['throttle:2,1'])->group(function (){
+    Route::get("/hello", [HelloController::class, "hello"]);
+    Route::get("/hell2", [HelloController::class, "hello2"]);
+});
