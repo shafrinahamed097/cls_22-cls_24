@@ -9,7 +9,7 @@
         <label>Name</label>
         <input name="name" value={{old('name')}}>
         <label>Email</label>
-        <input name="email" value="{{old('price')}}">
+        <input name="email" value={{old('email')}}>
         <br />
         <label>Price</label>
         <input name="price" type="number" value={{old('price')}}>
