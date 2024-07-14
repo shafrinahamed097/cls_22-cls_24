@@ -10,6 +10,9 @@
         <input name="name">
         <label>Email</label>
         <input name="email">
+        <br />
+        <label>Price</label>
+        <input name="price" type="number">
 
         <br/>
         <button>Submit</button>
