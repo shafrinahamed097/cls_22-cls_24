@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\ExtraController;
 use App\Http\Controllers\HelloController;
+use App\Http\Middleware\ScrectMIddleware;
 
 
 Route::get('/', function () {
@@ -21,7 +22,7 @@ Route::post("/handleform1",[ExtraController::class, 'checkValidation'])->name("f
 
 Route::get("/secret", function(){
     return "Secret Message";
-});
+})->middleware(ScrectMIddleware::class);
 
 Route::get("/hello", function(){
     return "Hello World";
