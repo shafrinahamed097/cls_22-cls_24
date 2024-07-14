@@ -23,9 +23,9 @@ class FormVResquest extends FormRequest
     {
         return [
             //
-            'name'=>'required|min:3|max:20|alpha|not_in:admin',
+            'name'=>'required|min:3|max:20|alpha|not_in:admin,password',
             'email'=>'required|email',
-            'price'=>'required|numeric|min:10',
+            'price'=>'nullable|numeric|min:10'
         ];
     }
 }

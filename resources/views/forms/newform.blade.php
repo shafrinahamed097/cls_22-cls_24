@@ -7,12 +7,12 @@
     <form enctype="multipart/form-data" action="{{ route('form1.post') }}" method="POST">
         @csrf
         <label>Name</label>
-        <input name="name">
+        <input name="name" value={{old('name')}}>
         <label>Email</label>
-        <input name="email">
+        <input name="email" value="{{old('price')}}">
         <br />
         <label>Price</label>
-        <input name="price" type="number">
+        <input name="price" type="number" value={{old('price')}}>
 
         <br/>
         <button>Submit</button>
